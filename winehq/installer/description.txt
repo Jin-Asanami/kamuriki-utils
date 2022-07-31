@@ -1,0 +1,5 @@
+
+
+WineHQのインストーラ。
+バージョン毎に分けてあるので適切なのを```/usr/bin```にコピー後、```sudo chmod 755 /usr/bin/wine-installer```と実行して下さい。
+```sudo wine-installer```でWineHQ (Devel版)、PlayOnLinux、Q4Wineを導入できます。
