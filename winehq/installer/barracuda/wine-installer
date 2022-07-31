@@ -1,0 +1,11 @@
+#!/bin/sh
+if [ "$(whoami)" != "root" ] then
+  echo "Need to be root or run with sudo. Exiting."
+  exit 1
+fi
+
+dpkg --add-architecture i386
+sudo wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+sudo wget -nc -P /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
+sudo apt update
+sudo apt install --install-recommends winehq-devel playonlinux q4wine
