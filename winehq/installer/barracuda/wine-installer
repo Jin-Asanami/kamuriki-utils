@@ -5,7 +5,7 @@ if [ "$(whoami)" != "root" ];then
 fi
 
 dpkg --add-architecture i386
-wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+wget -nc -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 wget -nc -P /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
 apt update
 apt install --install-recommends winehq-devel playonlinux q4wine
